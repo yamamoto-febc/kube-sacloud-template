@@ -14,7 +14,7 @@ resource sakuracloud_disk "kube_sacloud_disk" {
   source_archive_id = "${data.sakuracloud_archive.archive.id}"
   ssh_key_ids       = ["${sakuracloud_ssh_key.ssh_key.id}"]
   note_ids          = ["${sakuracloud_note.allow_sudo.id}", "${sakuracloud_note.set_eth1.id}"]
-  hostname          = "${var.disk_name}"
+  hostname          = "${var.server_name}"
   password          = "${var.password}"
   disable_pw_auth   = true
   size              = "${var.server_spec["disk_size"]}"
