@@ -33,7 +33,7 @@ data sakuracloud_archive "archive" {
 resource sakuracloud_server "kube_sacloud_server" {
   name        = "${var.server_name}"
   description = "kube-sacloud server for development"
-  tags        = ["kube-sacloud-devel", "worker", "controller", "@virtio-net-pci"]
+  tags        = ["kube-sacloud-devel", "worker", "controller"]
   core        = "${var.server_spec["core"]}"
   memory      = "${var.server_spec["memory"]}"
 
@@ -84,6 +84,11 @@ resource sakuracloud_server "kube_sacloud_server" {
   provisioner "file" {
     content     = "${random_id.bootstrap_token.hex},kubelet-bootstrap,10001,\"system:kubelet-bootstrap\""
     destination = "/home/ubuntu/token.csv"
+  }
+
+  provisioner "file" {
+    source      = "provisioning/wait-for-it.sh"
+    destination = "/home/ubuntu/wait-for-it.sh"
   }
 
   provisioner "remote-exec" {

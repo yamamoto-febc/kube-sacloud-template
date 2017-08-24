@@ -6,7 +6,7 @@ sudo apt-get install -y curl || exit 1
 
 export DEBIAN_FRONTEND=noninteractive
 # install kubectl
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.6.1/bin/linux/amd64/kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.7.4/bin/linux/amd64/kubectl
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin
 

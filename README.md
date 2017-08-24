@@ -10,7 +10,7 @@
 
 |   Product  | Version |
 |------------|---------|
-|`kubernetes`| 1.6.1   |
+|`kubernetes`| 1.7.4   |
 |`etcd`      | 3.1.4   |
 |`docker`    | 1.12.6  |
 
