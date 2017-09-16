@@ -1,5 +1,7 @@
 # kube-sacloud-template
 
+![overview](images/overview.png "overview")
+
 ## 概要
 
 [kubernetes](https://kubernetes.io)をさくらのクラウド上に最小構成で構築するための[Terraform](https://terraform.io)テンプレート
